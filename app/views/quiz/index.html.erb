@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz</title>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <style>
+        h1 {text-align: center;}
+    </style>
+  </head>
+
+  <body>
+    <h1>Quiz Question Generator</h1>
+    <div margin=auto>
+        <%= form_with(url: "/quiz/click", method: "post") do  %>
+        <%= label_tag(:query, "Search for:") %>
+        <%= text_field_tag(:query) %>
+        <%= submit_tag("Search") %>
+        <% end %>
+        <span><%= @text %></span>
+    </div>
+  </body>
+</html>
+
+
+
+
+
